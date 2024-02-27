@@ -12,9 +12,7 @@ function Favoritos(){
                 <h1>Meus Favoritos</h1>
             </Titulo>
             <section className={styles.container}>
-                {videos.map((video) => {
-                    return <Card {...video} key={video.id} />
-                })}
+                <Card id='1' titulo='Teste Favoritos' capa='https://caelum-online-public.s3.amazonaws.com/2802-react-praticando/img1.png' />
             </section>
         </>
     )
