@@ -6,8 +6,8 @@ import styles from './Inicio.module.css';
 
 function Inicio() {
     return (
-        <>           
-            <Banner imagem="home"/> 
+        <>
+            <Banner imagem="home" />
             <Titulo>
                 <h1>Um lugar para guardar seus vídeos e filmes!</h1>
             </Titulo>
@@ -17,7 +17,7 @@ function Inicio() {
                 })}
             </section>
         </>
-    );
+    )
 }
 
 export default Inicio;

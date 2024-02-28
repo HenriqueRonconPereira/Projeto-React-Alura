@@ -1,18 +1,21 @@
-import styles from './Favoritos.module.css';
-import videos from 'json/db.json';
 import Banner from 'components/Banner';
-import Titulo from 'components/Titulo';
 import Card from 'components/Card';
+import Titulo from 'components/Titulo';
+import { useFavoritoContext } from 'contextos/Favoritos';
+import styles from './Favoritos.module.css';
 
-function Favoritos(){
-    return(
+function Favoritos() {
+    const { favorito } = useFavoritoContext();
+    return (
         <>
-            <Banner imagem="favoritos"/>
+            <Banner imagem='favoritos' />
             <Titulo>
                 <h1>Meus Favoritos</h1>
             </Titulo>
             <section className={styles.container}>
-                <Card id='1' titulo='Teste Favoritos' capa='https://caelum-online-public.s3.amazonaws.com/2802-react-praticando/img1.png' />
+                {favorito.map((fav) => {
+                    return <Card {...fav} key={fav.id} />
+                })}
             </section>
         </>
     )
